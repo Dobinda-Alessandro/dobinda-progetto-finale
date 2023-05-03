@@ -19,6 +19,6 @@ mycursor = mydb.cursor()
 
 @app.route('/units')
 def unitList():
-    mycursor.execute("Select * FROM MC_unit")
+    mycursor.execute("Select * FROM MC_Unit")
     myresult = mycursor.fetchall()
     return render_template('MC_GG.html', units=myresult)
