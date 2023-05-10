@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Migliori panini</h1>
-    {% for item in units %}
+    {% for item in panini %}
 
     
 
@@ -13,7 +13,7 @@
             nome panino: {{ item[0] }}
            
         </p>
-    <img src="../imagini/{{ item[0] }}.jpg" alt="{{item[0]}}" widht="20">
+    <img src="../static/images/{{ item[0] }}.jpg" alt="{{item[0]}}" widht="20">
         <p>
 
             costo : {{ item[1] }}

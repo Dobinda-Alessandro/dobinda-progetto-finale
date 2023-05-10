@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return render_template('hello.html', name='Alessandro')
+    return render_template('hello.html', name='Alessandro Dobinda')
 
 mydb = mysql.connector.connect(
   host="localhost",
@@ -17,8 +17,8 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 
-@app.route('/units')
+@app.route('/panini')
 def unitList():
     mycursor.execute("Select * FROM MC_Unit")
     myresult = mycursor.fetchall()
-    return render_template('MC_GG.html', units=myresult)
+    return render_template('MC_GG.html', panini=myresult)
