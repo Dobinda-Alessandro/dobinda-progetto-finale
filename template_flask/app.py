@@ -22,3 +22,4 @@ def unitList():
     mycursor.execute("Select * FROM MC_Unit")
     myresult = mycursor.fetchall()
     return render_template('MC_GG.html', panini=myresult)
+
