@@ -23,3 +23,16 @@ def unitList():
     myresult = mycursor.fetchall()
     return render_template('MC_GG.html', panini=myresult)
 
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="MC_PANINI"
+)
+mycursor = mydb.cursor()
+
+@app.route('/Big_Mac')
+def panino_Big_Mac():
+    mycursor.execute("SELECT * FROM MC_Unit ")
+    myresult = mycursor.fetchall()
+    return render_template('Big_Mac.html', Big_Mac=myresult)

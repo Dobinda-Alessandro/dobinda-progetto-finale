@@ -1,38 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title> Panini del Mc </title>
 </head>
+
 <body>
     <h1>Migliori panini</h1>
     {% for item in panini %}
 
+  
+    <a href="/{{ item[0] }}">
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" widht="20">
+    </a>
     
-
-        <p>
-            nome panino: {{ item[0] }}
-           
-        </p>
-    <img src="../static/images/{{ item[0] }}.jpg" alt="{{item[0]}}" widht="20">
-   
-        <p>
-
-            costo : {{ item[1] }}
-
-        </p>
-        <p>
-
-            calorie : {{ item[2] }}
-            
-        </p>
-        <p>
-
-            voto : {{ item[3] }}
-
-        </p>
-
-
-        
     {% endfor %}
+    </p>
 </body>
+
 </html>
