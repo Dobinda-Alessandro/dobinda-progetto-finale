@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Big Mac</title>
+    <title>Panino</title>
 </head>
 <body>
     {% for item in Big_Mac %}
-<p> nome_panino: {{0}}</p>
-    {% endfor %}
+
+    <p>nome:{{item[0]}}</p>
+    <a href="/{{ item[0] }}">
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" widht="20">
+    </a>
+    <p>costo:{{item[1]}}</p>  
+    <p>calorie:{{item[2]}}</p>  
+    <p>voto_gusto:{{item[3]}}</p>
+    
+    
+    {% endfor %}  
 </body>
 </html>

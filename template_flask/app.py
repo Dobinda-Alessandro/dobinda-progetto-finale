@@ -31,8 +31,8 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
-@app.route('/Big_Mac')
-def panino_Big_Mac():
-    mycursor.execute("SELECT * FROM MC_Unit ")
+@app.route('/<panino>')
+def panino_Big_Mac(panino):
+    mycursor.execute("SELECT * FROM MC_Unit Where nome_panino='{}'".format(panino))
     myresult = mycursor.fetchall()
     return render_template('Big_Mac.html', Big_Mac=myresult)
