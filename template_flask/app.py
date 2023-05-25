@@ -21,7 +21,7 @@ mycursor = mydb.cursor()
 def unitList():
     mycursor.execute("Select * FROM MC_Unit")
     myresult = mycursor.fetchall()
-    return render_template('MC_GG.html', panini=myresult)
+    return render_template('MC_GG.html', panini_foto=myresult)
 
 mydb = mysql.connector.connect(
   host="localhost",
@@ -32,7 +32,11 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 @app.route('/<panino>')
-def panino_Big_Mac(panino):
-    mycursor.execute("SELECT * FROM MC_Unit Where nome_panino='{}'".format(panino))
+def Panini(panino):
+    mycursor.execute("SELECT * FROM MC_Unit, Recensioni Where MC_Unit.nome_panino = Recensioni.nome_panino and MC_Unit.nome_panino='{}'".format(panino))
     myresult = mycursor.fetchall()
-    return render_template('Big_Mac.html', Big_Mac=myresult)
+    return render_template('Panini.html', Panino=myresult)
+
+
+
+

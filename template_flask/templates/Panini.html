@@ -4,17 +4,18 @@
     <title>Panino</title>
 </head>
 <body>
-    {% for item in Big_Mac %}
+    {% for item in Panino %}
 
     <p>nome:{{item[0]}}</p>
-    <a href="/{{ item[0] }}">
+   <a href="/{{ item[0] }}"> 
         <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" widht="20">
-    </a>
+   </a>
     <p>costo:{{item[1]}}</p>  
     <p>calorie:{{item[2]}}</p>  
     <p>voto_gusto:{{item[3]}}</p>
-    
-    
+    <p>recensioni:{{item[5]}}</p>
     {% endfor %}  
+    
+  
 </body>
 </html>
