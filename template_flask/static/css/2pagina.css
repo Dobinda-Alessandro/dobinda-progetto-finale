@@ -1,0 +1,50 @@
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .second-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .grid-item {
+    position: relative;
+  }
+  
+  .icon-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+  }
+  
+  .grid-item:hover .icon-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+ p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  body {
+    background-color: snow;
+  }
+  

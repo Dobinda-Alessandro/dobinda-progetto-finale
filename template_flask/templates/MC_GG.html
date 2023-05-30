@@ -3,19 +3,30 @@
 
 <head>
     <title> Panini del Mc </title>
+    <link rel="stylesheet" href="../static/css/2pagina.css" />
+
 </head>
 
-<body>
-    <h1>Migliori panini</h1>
-    {% for item in panini_foto %}
+<body >
 
-  
-    <a href="/{{ item[0] }}">
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" widht="20">
-    </a>
-    
-    {% endfor %}
-    </p>
+    <h1>I migliori panini</h1>
+    <p>Qui puoi scegliere il panino che desideri e scoprire tutto su di loro</p>
+    <div class="grid-container">
+        {% for item in panini_foto %}
+          <div class="grid-item">
+            <a href="/{{ item[0] }}">
+              <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}">
+              <span class="icon-text">Scopri di più</span>
+            </a>
+          </div>
+          {% if loop.index == 5 %}
+            </div>
+            <div class="second-grid-container">
+          {% endif %}
+        {% endfor %}
+
+    </div>
 </body>
+
 
 </html>
