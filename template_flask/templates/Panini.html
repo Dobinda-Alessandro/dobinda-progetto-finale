@@ -4,9 +4,9 @@
     <title>Panino</title>
     <link rel="stylesheet" href="../static/css/3pagina.css" />
 </head>
-<body>
+<body >
+    <div class="container">
     {% for item in Panino %}
-
     <p>nome:{{item[0]}}</p>
    <a href="/{{ item[0] }}"> 
         <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" widht="20">
@@ -15,7 +15,8 @@
     <p>calorie:{{item[2]}}</p>  
     <p>voto_gusto:{{item[3]}}</p>
     <p>recensioni:{{item[5]}}</p>
-    {% endfor %}  
+    {% endfor %} 
+ </div>
     
   
 </body>

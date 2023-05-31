@@ -1,4 +1,13 @@
-body{
-    background-image: url("static/images/muro.jpg");
-}
+body {
+    text-align: center;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 600px; /* Regola opzionale per limitare la larghezza del contenitore */
+    margin-top: 50px;
+    font-weight: bold;
+  }
 
+  
+  
